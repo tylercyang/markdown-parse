@@ -134,4 +134,14 @@ public class MarkdownParseTest {
 
         assertEquals(this.strList, List.of());
     }
+
+    @Test
+    public void testfile12() throws IOException {
+
+        Path fileName = Path.of("test-file9.md");
+        String contents = Files.readString(fileName);
+        this.strList = MarkdownParse.getLinks(contents);
+
+        assertEquals(this.strList, List.of("www.something.com"));
+    }
 }

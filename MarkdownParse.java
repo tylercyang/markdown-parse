@@ -61,7 +61,7 @@ public class MarkdownParse {
             
             //run for loop and .contains on the substring?
             boolean check = false;
-            for ( String s : imageExtensions ){
+            for ( String s : imageExtensions ) {
                 if (markdown.substring(openParen+1, closeParen).contains(s)){
                     check = true;
                     break;  
